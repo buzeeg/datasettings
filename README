@@ -1,7 +1,0 @@
-Repo for my Android "application" Data Settings
-
-Data Settings is in fact not really an android application. It is just a shortcut to the right settings page to allow in the user to enable or disable the data and/or the 3G in two clicks.
-
-The main issue is to support OS customizations, like HTC Sense or Samsung TouchWiz.
-
-The aim of the project is not to create a widget, in order to differ from every all other widgets already in Google Play which are modifying APN and can make them not very usable.

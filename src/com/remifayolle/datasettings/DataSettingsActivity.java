@@ -1,4 +1,4 @@
-package com.remifayolle.android.datasettings;
+package com.remifayolle.datasettings;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
