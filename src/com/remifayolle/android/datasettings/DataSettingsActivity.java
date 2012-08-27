@@ -2,7 +2,6 @@ package com.remifayolle.android.datasettings;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -15,8 +14,6 @@ public class DataSettingsActivity extends Activity {
         
         // Create Intent
         Intent i = new Intent(android.provider.Settings.ACTION_DATA_ROAMING_SETTINGS);
-        ComponentName cName = new ComponentName("com.android.phone","com.android.phone.Settings");
-        i.setComponent(cName); 
         
         // Start activity and catch potential exception
         try {
