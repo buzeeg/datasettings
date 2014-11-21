@@ -27,4 +27,4 @@ android:
 # Build
 script:
     - ./gradlew build
-    - ./wgradle check
+    - ./gradlew check
