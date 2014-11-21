@@ -1,20 +1,29 @@
-language: java
-jdk: oraclejdk7
-before_install:
-  # Install base Android SDK
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq libstdc++6:i386 lib32z1
-  - export COMPONENTS=build-tools-18.1.0,android-16,sysimg-16,extra-android-support
-  - curl -L https://raw.github.com/embarkmobile/android-sdk-installer/master/android-sdk-installer | bash /dev/stdin --install=$COMPONENTS
-  - source ~/.android-sdk-installer/env
+language: android
+android:
+  components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    - platform-tools
+    - tools
 
-  # Install Gradle
-  - wget http://services.gradle.org/distributions/gradle-1.8-bin.zip
-  - unzip gradle-1.8-bin.zip
-  - export GRADLE_HOME=$PWD/gradle-1.8
-  - export PATH=$GRADLE_HOME/bin:$PATH
+    # The BuildTools version used by your project
+    - build-tools-21.1.1
 
-  # Build
+    # The SDK version used to compile your project
+    - android-21
+
+    # Additional components
+    #- extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    #- addon-google_apis-google-19
+
+    # Specify at least one system image,
+    # if you need to run emulator(s) during your tests
+    #- sys-img-armeabi-v7a-android-19
+    #- sys-img-x86-android-17
+
+# Build
 install: gradle build
 script: gradle check
 
